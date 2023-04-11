@@ -1,0 +1,18 @@
+.vimeo-device {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.vimeo-device iframe {
+    width: 100vw;
+    height: 42.28vw;
+}
+
+.animation-content {
+    z-index: 1;
+    padding-top: calc(42.28vw - 70px);
+}

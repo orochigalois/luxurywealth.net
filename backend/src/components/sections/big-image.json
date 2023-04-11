@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_big_images",
+  "info": {
+    "displayName": "Big image",
+    "icon": "image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "BlackBackground": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
