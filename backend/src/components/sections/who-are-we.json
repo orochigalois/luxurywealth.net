@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_who_are_wes",
+  "info": {
+    "displayName": "Who are we",
+    "icon": "venus-mars"
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

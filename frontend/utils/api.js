@@ -182,15 +182,19 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsContactForm {
                     id
                     title
+                    text
                     button {
                       id
                       newTab
                       text
                       url
                     }
-                    image {
-                      ...FileParts
-                    }
+                  }
+                  ... on ComponentSectionsWhoAreWe {
+                    id
+                    subtitle
+                    title
+                    text
                   }
                   ... on ComponentSectionsFeatureColumnsGroup {
                     id

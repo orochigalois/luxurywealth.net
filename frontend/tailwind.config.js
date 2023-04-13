@@ -6,7 +6,7 @@ module.exports = {
   darkMode: false, // or "media" or "class"
   theme: {
     fontFamily: {
-      sans: ['ABeeZee', 'sans-serif'],
+      sans: ['Satoshi', 'sans-serif'],
     },
     extend: {
       colors: {

@@ -1,0 +1,12 @@
+.feedback{
+
+}
+.form-field::placeholder{
+    text-transform: uppercase;
+    @apply text-gray-400 text-xs;
+    letter-spacing: 0.2em;
+    
+}
+.form-field {
+    @apply border-b border-gray-300 outline-none  font-medium leading-4 py-2.5 w-full;
+}

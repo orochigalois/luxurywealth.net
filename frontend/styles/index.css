@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap'); */
+@import url('satoshi.css');
 @import "./modules/button.scss";
 @import "./sections/animation.scss";
 @import "./sections/slider.scss";
 @import "./sections/hero.scss";
+@import "./sections/form.scss";
+@import "./sections/whoarewe.scss";
 
 
 @tailwind base;
@@ -15,6 +18,8 @@
 html {
   font-size: 13px;
   overflow-x:hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   @apply text-gray-900;
 }
 
@@ -26,8 +31,18 @@ html {
 
 @media screen and (min-width: 768px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
+}
+
+.section{
+    max-width: 1320px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.tracking-widestx2 {
+    letter-spacing: 0.2em;
 }
 
 .rich-text-hero a {

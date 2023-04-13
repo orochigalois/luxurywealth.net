@@ -3,6 +3,7 @@ import Hero from "@/components/sections/hero"
 import BigImage from "@/components/sections/big-image"
 import TextImage from "@/components/sections/text-image"
 import Animation from "@/components/sections/animation"
+import Whoarewe from "@/components/sections/who-are-we"
 import Slider from "@/components/sections/slider"
 import ContactForm from "@/components/sections/contact-form"
 import LargeVideo from "@/components/sections/large-video"
@@ -20,6 +21,7 @@ const sectionComponents = {
   ComponentSectionsBigImage: BigImage,
   ComponentSectionsTextImage: TextImage,
   ComponentSectionsAnimation: Animation,
+  ComponentSectionsWhoAreWe: Whoarewe,
   ComponentSectionsSlider: Slider,
   ComponentSectionsContactForm: ContactForm,
   ComponentSectionsLargeVideo: LargeVideo,

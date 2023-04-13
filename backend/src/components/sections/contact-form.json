@@ -7,21 +7,16 @@
   },
   "options": {},
   "attributes": {
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "title": {
       "type": "string"
+    },
+    "text": {
+      "type": "text"
     },
     "button": {
       "type": "component",
       "repeatable": false,
-      "component": "links.blue-button"
+      "component": "links.form-button"
     }
   }
 }

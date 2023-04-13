@@ -54,7 +54,8 @@
         "sections.contact-form",
         "sections.animation",
         "sections.slider",
-        "sections.hero"
+        "sections.hero",
+        "sections.who-are-we"
       ],
       "pluginOptions": {
         "i18n": {

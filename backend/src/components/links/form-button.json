@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_form_buttons",
+  "info": {
+    "displayName": "Form button",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "newTab": {
+      "type": "boolean"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}
