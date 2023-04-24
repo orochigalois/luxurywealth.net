@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_news_and_medias",
+  "info": {
+    "displayName": "News & Media",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    }
+  }
+}

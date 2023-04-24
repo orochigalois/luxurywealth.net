@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_image_banners",
+  "info": {
+    "displayName": "Image banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

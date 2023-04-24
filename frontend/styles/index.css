@@ -6,6 +6,8 @@
 @import "./sections/hero.scss";
 @import "./sections/form.scss";
 @import "./sections/whoarewe.scss";
+@import "./sections/image_banner.scss";
+@import "./sections/footer.scss";
 
 
 @tailwind base;

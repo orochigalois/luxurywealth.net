@@ -15,16 +15,16 @@ module.exports = {
       container: {
         center: true,
         padding: {
-          DEFAULT: "1rem",
-          md: "2rem",
+          DEFAULT: "1.25rem",
+          md: "1.25rem",
         },
       },
     },
     screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
+      sm: "1320px",
+      md: "1320px",
+      lg: "1320px",
+      xl: "1320px",
     },
   },
   variants: {

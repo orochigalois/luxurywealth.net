@@ -1,0 +1,34 @@
+#footer {
+    padding-bottom: 84px;
+    .footer__top{
+        border-top: 1px solid #C2C0C3;
+        padding-top: 100px;
+    }
+    .footer__nav__title {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.2em;
+        text-align: left;
+    }
+
+    .footer__nav__link {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+margin-top: 10px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer__bottom {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        color: #8D8282;
+        margin-top: 114px;
+    }
+}

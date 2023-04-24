@@ -55,7 +55,9 @@
         "sections.animation",
         "sections.slider",
         "sections.hero",
-        "sections.who-are-we"
+        "sections.who-are-we",
+        "sections.image-banner",
+        "sections.news-and-media"
       ],
       "pluginOptions": {
         "i18n": {

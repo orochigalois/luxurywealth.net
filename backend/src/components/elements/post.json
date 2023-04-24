@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_posts",
+  "info": {
+    "displayName": "Post",
+    "icon": "hands"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

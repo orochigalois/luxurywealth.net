@@ -196,6 +196,13 @@ export async function getPageData({ slug, locale, preview }) {
                     title
                     text
                   }
+                  ... on ComponentSectionsImageBanner {
+                    id
+                    text
+                    image {
+                        ...FileParts
+                    }
+                  }
                   ... on ComponentSectionsFeatureColumnsGroup {
                     id
                     features {
