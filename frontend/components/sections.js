@@ -5,6 +5,7 @@ import TextImage from "@/components/sections/text-image"
 import Animation from "@/components/sections/animation"
 import Whoarewe from "@/components/sections/who-are-we"
 import ImageBanner from "@/components/sections/image-banner"
+import NewsMedia from "@/components/sections/news-media"
 import Slider from "@/components/sections/slider"
 import ContactForm from "@/components/sections/contact-form"
 import LargeVideo from "@/components/sections/large-video"
@@ -24,6 +25,7 @@ const sectionComponents = {
   ComponentSectionsAnimation: Animation,
   ComponentSectionsWhoAreWe: Whoarewe,
   ComponentSectionsImageBanner: ImageBanner,
+  ComponentSectionsNewsAndMedia: NewsMedia,
   ComponentSectionsSlider: Slider,
   ComponentSectionsContactForm: ContactForm,
   ComponentSectionsLargeVideo: LargeVideo,

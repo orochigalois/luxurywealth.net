@@ -203,6 +203,24 @@ export async function getPageData({ slug, locale, preview }) {
                         ...FileParts
                     }
                   }
+                  ... on ComponentSectionsNewsAndMedia {
+                    id
+                    Title
+                    posts {
+                        data{
+                            id
+                            
+                            attributes {
+                                createdAt
+                                title
+                                image {
+                                    ...FileParts
+                                }
+                                category
+                            }
+                        }
+                    }
+                  }
                   ... on ComponentSectionsFeatureColumnsGroup {
                     id
                     features {

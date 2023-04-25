@@ -8,6 +8,7 @@
 @import "./sections/whoarewe.scss";
 @import "./sections/image_banner.scss";
 @import "./sections/footer.scss";
+@import "./sections/newsmedia.scss";
 
 
 @tailwind base;
@@ -18,7 +19,7 @@
 
 
 html {
-  font-size: 13px;
+  font-size: 16px;
   overflow-x:hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,7 +28,7 @@ html {
 
 @media screen and (min-width: 640px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
