@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "complete": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "HOTEL",
+        "SUPER MARKET",
+        "SHOPPING MALL"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "image_shown_on_homepage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "slider": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "private": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "subDescription": {
+      "type": "text"
+    }
+  }
+}

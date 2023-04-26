@@ -34,7 +34,6 @@ const EmblaCarouselAlt = ({ slides }) => {
     };
 
     const images = slides.map((slide) => getStrapiMedia(slide.attributes.image.data.attributes.url))
-    slides.forEach((slide) => { console.log(slide.attributes.image.data.attributes) })
 
     return (
         <>

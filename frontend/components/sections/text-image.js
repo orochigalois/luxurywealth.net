@@ -3,7 +3,6 @@ import Markdown from "react-markdown"
 import BlueButton from "../elements/blue-button"
 
 const TextImage = ({ data }) => {
-    console.log(data.Image)
   return (
 
     <section className="flex flex-wrap overflow-hidden max-w-7xl mx-auto py-24 justify-between px-5">
