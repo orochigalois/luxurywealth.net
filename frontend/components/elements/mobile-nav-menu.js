@@ -37,10 +37,6 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
               </li>
             ))}
           </ul>
-          <ButtonLink
-            button={navbar.button}
-            appearance={getButtonAppearance(navbar.button.type, "light")}
-          />
         </div>
       </div>
     </div>

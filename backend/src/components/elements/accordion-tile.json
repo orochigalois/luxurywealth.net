@@ -1,21 +1,22 @@
 {
-  "collectionName": "components_sections_heroes",
+  "collectionName": "components_elements_accordion_tiles",
   "info": {
-    "displayName": "Hero",
-    "icon": "allergies",
-    "description": ""
+    "displayName": "Accordion Tile"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "slider": {
+    "image": {
       "allowedTypes": [
         "images"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
+    },
+    "text": {
+      "type": "text"
     }
   }
 }

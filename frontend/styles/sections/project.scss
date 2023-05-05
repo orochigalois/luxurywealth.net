@@ -1,0 +1,237 @@
+.single__project {
+    background: #EAECEB;
+}
+
+#project {
+    background: #EAECEB;
+    margin-top: 280px;
+
+    height: 598px;
+    padding-bottom: 30px;
+    margin-bottom: 80px;
+    @media (max-width: 768px) {
+        height: auto;
+        margin-top: 150px;
+    }
+}
+
+#project .embla {
+    --slide-spacing: 0.625rem;
+    --slide-size: 100%;
+    --slide-height: auto;
+    padding: 0;
+    position: relative;
+}
+
+
+#project .embla__viewport {
+    overflow: hidden;
+}
+
+#project .left .embla__container {
+    display: flex;
+    flex-direction: row;
+    height: 248px;
+    margin-left: calc(var(--slide-spacing) * -1);
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+#project .right .embla__container {
+    display: flex;
+    flex-direction: row;
+    height: 568px;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
+#project .embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    position: relative;
+    cursor: pointer;
+}
+
+
+#project .img__wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#project .img__wrapper:hover .embla__slide__img {
+    transform: scale(1.15);
+}
+
+#project .embla__slide__img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    transition: transform 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#project .embla__button--prev {
+    right: 60px;
+    position: absolute;
+    bottom: -20px;
+}
+
+#project .embla__button--next {
+    right: 0;
+    position: absolute;
+    bottom: -20px;
+}
+
+
+#project .left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+#project .left h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 52px;
+
+}
+
+#project .left p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+}
+
+#project .left .complete {
+    margin-bottom: 30px;
+}
+
+#project .left .category {
+    margin-bottom: 30px;
+}
+
+#project .left .track__num {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2em;
+    text-align: left;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+#project .right {
+    padding-left: 10px;
+    width: 70%;
+    @media (max-width: 768px) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+}
+
+#project__info .wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: 1px solid #BEBAB9;
+    border-bottom: 1px solid #BEBAB9;
+}
+
+#project__info .left {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 41px;
+    letter-spacing: 0em;
+    padding-right: 210px;
+    width: 50%;
+
+    @media (max-width: 1000px) {
+        padding-right: 50px;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+}
+
+#project__info .right {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    width: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+#project__info .container{
+    position: relative;
+}
+#project__info .next__project__arrow  {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+#project__info .next__project__arrow  p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2em;
+    margin-right: 20px;
+}
+
+
+
+#project .container{
+    position: relative;
+}
+#project .container .project__back__arrow{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: -105px;
+    padding-left: 20px;
+    cursor: pointer;
+    @media (max-width: 768px) {
+        top: -40px;
+    }
+}
+
+.project__back__arrow p{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2em;
+    margin-left: 20px;
+}

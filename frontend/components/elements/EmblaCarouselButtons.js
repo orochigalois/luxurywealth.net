@@ -21,6 +21,7 @@ export const PrevButton = ({ enabled, onClick }) => (
 );
 
 export const NextButton = ({ enabled, onClick }) => (
+    
     <button
         className="embla__button embla__button--next"
         onClick={onClick}
@@ -31,26 +32,28 @@ export const NextButton = ({ enabled, onClick }) => (
         </svg>
     </button>
 );
-export const PrevButtonAlt = ({ enabled, onClick }) => (
+export const PrevButtonAlt = ({ enabled, onClick,fill }) => (
+    enabled&&
     <button
         className="embla__button embla__button--prev"
         onClick={onClick}
         disabled={!enabled}
     >
         <svg className="embla__button__svg" width="36" height="6" viewBox="0 0 36 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M5.86907 0L0 2.75047L5.80444 6L5.86917 3.33363H36V2.4168H5.86917L5.86907 0Z" fill="#1E1E1E" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M5.86907 0L0 2.75047L5.80444 6L5.86917 3.33363H36V2.4168H5.86917L5.86907 0Z" fill={fill} />
         </svg>
     </button>
 );
 
-export const NextButtonAlt = ({ enabled, onClick }) => (
+export const NextButtonAlt = ({ enabled, onClick,fill }) => (
+    enabled&&
     <button
         className="embla__button embla__button--next"
         onClick={onClick}
         disabled={!enabled}
     >
         <svg className="embla__button__svg" width="36" height="6" viewBox="0 0 36 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M30.1309 0L36 2.75047L30.1956 6L30.1308 3.33363H0V2.4168H30.1308L30.1309 0Z" fill="#1E1E1E" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M30.1309 0L36 2.75047L30.1956 6L30.1308 3.33363H0V2.4168H30.1308L30.1309 0Z" fill={fill} />
         </svg>
 
     </button>

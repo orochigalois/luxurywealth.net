@@ -1,10 +1,10 @@
 import React from "react"
 
-const WorldIcon = () => {
+const WorldIcon = ({colorClass}) => {
   return (
     <div className="w-4 h-4 mr-2 ">
       <svg
-        className="fill-current text-white"
+        className={`${colorClass} fill-current`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 490 490"
       >

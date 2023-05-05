@@ -8,48 +8,15 @@ import { getGlobalData } from "utils/api"
 import "@/styles/index.css"
 
 const MyApp = ({ Component, pageProps }) => {
-  // Extract the data we need
-  const { global } = pageProps
-  if (!global) {
-    return <ErrorPage statusCode={404} />
-  }
-  const { metadata, favicon, metaTitleSuffix } = global.attributes
 
-  return (
-    <>
-      {/* Favicon */}
-      <Head>
-        <link
-          rel="shortcut icon"
-          href={getStrapiMedia(favicon.data.attributes.url)}
-        />
-        {/* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta> */}
-      </Head>
-      {/* Global site metadata */}
-      <DefaultSeo
-        titleTemplate={`%s | ${metaTitleSuffix}`}
-        title="Page"
-        description={metadata.metaDescription}
-        openGraph={{
-          images: Object.values(
-            metadata.shareImage.data.attributes.formats
-          ).map((image) => {
-            return {
-              url: getStrapiMedia(image.url),
-              width: image.width,
-              height: image.height,
-            }
-          }),
-        }}
-        twitter={{
-          cardType: metadata.twitterCardType,
-          handle: metadata.twitterUsername,
-        }}
-      />
-      {/* Display the content */}
-      <Component {...pageProps} />
-    </>
-  )
+
+    return (
+        <>
+            
+            {/* Display the content */}
+            <Component {...pageProps} />
+        </>
+    )
 }
 
 // getInitialProps disables automatic static optimization for pages that don't

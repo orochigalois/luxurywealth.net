@@ -72,8 +72,8 @@ const EmblaCarouselAlt = ({ slides }) => {
                         onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
                     />
                 )}
-                <PrevButtonAlt onClick={scrollPrev} enabled={prevBtnEnabled} />
-                <NextButtonAlt onClick={scrollNext} enabled={nextBtnEnabled} />
+                <PrevButtonAlt onClick={scrollPrev} enabled={prevBtnEnabled} fill={"#1E1E1E"}/>
+                <NextButtonAlt onClick={scrollNext} enabled={nextBtnEnabled} fill={"#1E1E1E"}/>
             </div>
 
         </>

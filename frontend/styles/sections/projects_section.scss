@@ -1,0 +1,143 @@
+#projects {
+    background: #000;
+    padding-top: 100px;
+    padding-bottom: 126px;
+
+    .wrapper {
+        display: flex;
+
+        .left {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .projects__title {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 16px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: white;
+            }
+
+            .projects__content {
+                .name {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    color: white;
+                    margin-bottom: 13px;
+                }
+
+                .cat {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    letter-spacing: 0.2em;
+                    color: white;
+                }
+            }
+        }
+
+        .right {
+            width: 70%;
+            position: relative;
+        }
+    }
+
+    .embla {
+        --slide-spacing: 0.625rem;
+        --slide-size: 100%;
+        --slide-height: auto;
+        padding: 0;
+        position: relative;
+    }
+
+
+    .embla__viewport {
+        overflow: hidden;
+    }
+
+    .embla__container {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        margin-left: calc(var(--slide-spacing) * -1);
+    }
+
+    .embla__slide {
+        flex: 0 0 var(--slide-size);
+        min-width: 0;
+        padding-left: var(--slide-spacing);
+        position: relative;
+        cursor: pointer;
+    }
+
+    .img__wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .img__wrapper:hover .embla__slide__img {
+        transform: scale(1.15);
+    }
+
+    .embla__slide__img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        transition: transform 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .embla__button--prev {
+        right: 60px;
+        position: absolute;
+        bottom: -25px;
+    }
+
+    .embla__button--next {
+        right: 0;
+        position: absolute;
+        bottom: -25px;
+    }
+
+
+
+
+}
+
+
+#projects .next__wrapper {
+    width: 370px;
+    height: 240px;
+    object-fit: cover;
+    position: absolute;
+    right: -380px;
+    top: 0;
+    overflow: hidden;
+}
+
+#projects .next__wrapper:hover .next__image {
+    transform: scale(1.15);
+}
+
+
+#projects .next__image {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    transition: transform 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

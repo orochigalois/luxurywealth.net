@@ -1,0 +1,171 @@
+#header {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+
+}
+
+#header.sticky {
+    position: fixed;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1E1E1E;
+}
+
+
+
+#header .header__logo {
+    width: 291px;
+
+    @media (max-width: 550px) {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+}
+
+#header.sticky .header__logo{
+    display: none;
+}
+
+.single__project #header .header__logo{
+    display: none;
+}
+
+
+#header .header__logo__dark {
+    width: 291px;
+
+    @media (max-width: 550px) {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    display: none;
+}
+
+#header.sticky .header__logo__dark{
+    display: block;
+}
+
+.single__project #header .header__logo__dark{
+    display: block;
+}
+
+
+#header .header__menu {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+
+    &:hover {
+        &::before {
+            content: '';
+            position: absolute;
+            border-left: 1px solid #fff;
+            height: 18px;
+            left: 0;
+            top: 4px;
+        }
+    }
+
+    &.active {
+        &::before {
+            content: '';
+            position: absolute;
+            border-left: 1px solid #fff;
+            height: 18px;
+            left: 0;
+            top: 4px;
+        }
+    }
+}
+
+#header.sticky .header__menu {
+    color: #1E1E1E;
+    &:hover {
+        &::before {
+
+            border-left: 1px solid #1E1E1E;
+
+        }
+    }
+
+}
+
+.world__button {}
+
+.world__button__span {
+    color: #fff;
+}
+#header.sticky .world__button__span {
+    color: #1E1E1E;
+}
+.world__button__arrow {
+    color:#fff;
+}
+
+#header.sticky .world__button__arrow {
+    color:#1E1E1E;
+}
+.world__drop {
+    /*background-color: rgb(37, 99, 235);*/
+    background-color: #B8860B;
+}
+
+.world__drop__text {
+    color: #fff;
+}
+
+
+.world__icon{
+    color: #fff;
+}
+
+#header.sticky .world__icon{
+    color: #1E1E1E;
+}
+
+#header .hamburger{
+    color:white;
+}
+
+#header.sticky .hamburger{
+    color:#1E1E1E;
+}
+
+
+
+
+.single__project #header .header__menu {
+    color: #1E1E1E;
+    &:hover {
+        &::before {
+
+            border-left: 1px solid #1E1E1E;
+
+        }
+    }
+
+}
+
+.single__project .world__button__span {
+    color: #1E1E1E;
+}
+
+.single__project #header .world__button__arrow {
+    color:#1E1E1E;
+}
+
+.single__project #header .world__icon{
+    color: #1E1E1E;
+}
+
+.single__project #header .hamburger{
+    color:#1E1E1E;
+}

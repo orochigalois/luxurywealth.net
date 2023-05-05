@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_accordions",
+  "info": {
+    "displayName": "Accordion",
+    "icon": "backward"
+  },
+  "options": {},
+  "attributes": {
+    "accordion": {
+      "displayName": "Accordion Tile",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.accordion-tile"
+    }
+  }
+}

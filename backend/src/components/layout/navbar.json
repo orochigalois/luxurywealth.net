@@ -19,6 +19,14 @@
       "component": "links.button-link"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logo_dark_theme": {
       "allowedTypes": [
         "images"
       ],

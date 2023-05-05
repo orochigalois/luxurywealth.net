@@ -7,8 +7,12 @@
 @import "./sections/form.scss";
 @import "./sections/whoarewe.scss";
 @import "./sections/image_banner.scss";
+@import "./sections/header.scss";
 @import "./sections/footer.scss";
 @import "./sections/newsmedia.scss";
+@import "./sections/project.scss";
+@import "./sections/accordion.scss";
+@import "./sections/projects_section.scss";
 
 
 @tailwind base;
@@ -16,11 +20,10 @@
 @tailwind utilities;
 
 
-
-
 html {
   font-size: 16px;
   overflow-x:hidden;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @apply text-gray-900;

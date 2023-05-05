@@ -10,7 +10,7 @@ import WorldIcon from "./icons/world"
 import { useOnClickOutside } from "../utils/hooks"
 import { getLocalizedPage } from "../utils/localize"
 
-const LocaleSwitch = ({ pageContext }) => {
+const LocaleSwitch = ({ pageContext,isDarkTheme=false }) => {
   const isMounted = useRef(false)
   const select = useRef()
   const router = useRouter()
@@ -77,15 +77,15 @@ const LocaleSwitch = ({ pageContext }) => {
     <div ref={select} className="relative ml-8 z-20">
       <button
         type="button"
-        className="hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white focus:outline-none flex items-center justify-between px-2 py-2 cursor-pointer h-full rounded-md w-32"
+        className="world__button focus:outline-none flex items-center justify-between px-2 py-2 cursor-pointer h-full rounded-md w-32"
         onClick={() => setShowing(!showing)}
       >
-        <WorldIcon />
-        <span className="text-white capitalize">{beautifyLocale(locale)}</span>
-        <MdExpandMore className="ml-1 text-white" />
+        <WorldIcon colorClass={'world__icon'}/>
+        <span className="world__button__span capitalize">{beautifyLocale(locale)}</span>
+        <MdExpandMore className="ml-1 world__button__arrow" />
       </button>
       <div
-        className={`w-full bg-white p-1 mt-1 shadow-lg rounded-md ${
+        className={`world__drop w-full p-1 mt-1 shadow-lg rounded-md ${
           showing ? "absolute" : "hidden"
         }`}
       >
@@ -101,7 +101,7 @@ const LocaleSwitch = ({ pageContext }) => {
               >
                 <p
                   onClick={() => handleLocaleChange(locale)}
-                  className="capitalize hover:bg-blue-600 hover:text-white cursor-pointer p-2 rounded-md text-center text-blue-600"
+                  className="world__drop__text capitalize cursor-pointer p-2 rounded-md text-center"
                 >
                   {beautifyLocale(locale)}
                 </p>

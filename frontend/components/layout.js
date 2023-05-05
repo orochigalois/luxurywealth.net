@@ -3,12 +3,12 @@ import Navbar from "./elements/navbar"
 import Footer from "./elements/footer"
 import NotificationBanner from "./elements/notification-banner"
 
-const Layout = ({ children, global, pageContext }) => {
+const Layout = ({ children, global, pageContext, className }) => {
   const { navbar, footer, notificationBanner } = global.attributes
 
   const [bannerIsShown, setBannerIsShown] = useState(true)
   return (
-    <div className="flex flex-col justify-between min-h-screen">
+    <div className={`flex flex-col justify-between min-h-screen ${className}`}>
       {/* Aligned to the top */}
       <div className="flex-1">
         {notificationBanner && bannerIsShown && (

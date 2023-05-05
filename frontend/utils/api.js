@@ -118,10 +118,19 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsHero {
                     id
                     title
-                    text
-                    image {
-                      ...FileParts
-                    }
+                    slider{
+                        data{
+                          id
+                          attributes {
+                            alternativeText
+                            width
+                            height
+                            mime
+                            url
+                            formats
+                          }
+                        }
+                      }
                   }
                   ... on ComponentSectionsBigImage {
                     id
@@ -220,6 +229,33 @@ export async function getPageData({ slug, locale, preview }) {
                             }
                         }
                     }
+                  }
+                  ... on ComponentSectionsProjects {
+                    id
+                    Title
+                    projects {
+                        data{
+                            id
+                            attributes {
+                                title
+                                category
+                                image_shown_on_homepage {
+                                    ...FileParts
+                                }
+                            }
+                        }
+                    }
+                  }
+                  ... on ComponentSectionsAccordion {
+                    id
+                    accordion {
+                        id
+                        title
+                        image {
+                            ...FileParts
+                        }
+                        text
+                      }
                   }
                   ... on ComponentSectionsFeatureColumnsGroup {
                     id
@@ -394,6 +430,9 @@ export async function getGlobalData(locale) {
                 }
                 navbar {
                   logo {
+                    ...FileParts
+                  }
+                  logo_dark_theme {
                     ...FileParts
                   }
                   links {

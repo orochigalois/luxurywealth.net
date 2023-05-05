@@ -1,3 +1,150 @@
-.hero-section{
-    min-height:800px;
+#hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+#hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+#hero .text {
+    position: relative;
+    z-index: 5;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 53px;
+    letter-spacing: 0em;
+    color: white;
+    text-transform: uppercase;
+    max-width: 544px;
+    padding-bottom: 88px;
+    @media (max-width: 870px) {
+        padding-bottom: 128px;
+    }
+    @media (max-width: 600px) {
+        font-size: 34px;
+        line-height: 43px;
+    }
+}
+
+#hero .embla {
+    --slide-spacing: 0;
+    --slide-size: 100%;
+    --slide-height: 100vh;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+#hero .embla__viewport {
+    overflow: hidden;
+
+}
+
+#hero .embla__container {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
+#hero .embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    position: relative;
+    cursor: pointer;
+}
+
+#hero .img__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero .img__wrapper:hover .embla__slide__img {
+    transform: scale(1.05);
+}
+
+#hero .embla__slide__img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    transition: transform 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#hero .embla__button--prev {
+    right: 60px;
+    position: absolute;
+    top: -52px;
+}
+
+#hero .embla__button--next {
+    right: 0;
+    position: absolute;
+    top: -52px;
+}
+
+
+
+
+#hero .embla__dots {
+    position: absolute;
+    bottom: 65px;
+    right: 40px;
+    z-index: 9;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#hero .embla__dot {
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    width: 40px;
+    height: 50px;
+    margin-right: 7.5px;
+    margin-left: 7.5px;
+    display: flex;
+    align-items: center;
+}
+
+#hero .embla__dot.is-selected {
+    width: 100px;
+}
+
+#hero .embla__dot:after {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    content: "";
+}
+
+#hero .embla__dot.is-selected:after {
+    background-color: #fff;
 }
