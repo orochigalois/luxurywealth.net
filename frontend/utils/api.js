@@ -363,7 +363,7 @@ export async function getPageData({ slug, locale, preview }) {
               }
             }
           }
-        }      
+        }
       `,
       variables: {
         slug,

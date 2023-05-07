@@ -22,15 +22,9 @@ const Animation = ({ data }) => {
         </div>
         <div className="w-full overflow-hidden md:w-1/2 text-white">
           <Markdown>{data.text}</Markdown>
-          <div className="mt-10">
-          </div>
+          <div className="mt-10"></div>
         </div>
-
       </div>
-
-
-
-
     </section>
   )
 }

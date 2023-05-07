@@ -13,7 +13,12 @@ const Button = ({
   className,
 }) => {
   return (
-    <button className={className} link={button} onClick={handleClick} type={type}>
+    <button
+      className={className}
+      link={button}
+      onClick={handleClick}
+      type={type}
+    >
       <div
         className={classNames(
           // Common classes

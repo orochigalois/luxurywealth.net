@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { buttonLinkPropTypes } from "utils/types"
 import CustomLink from "./custom-link"
 
-const ButtonContent = ({ button, appearance, compact, onClick}) => {
+const ButtonContent = ({ button, appearance, compact, onClick }) => {
   return (
     <div
       onClick={onClick}
@@ -41,7 +41,7 @@ const ButtonContent = ({ button, appearance, compact, onClick}) => {
   )
 }
 
-const ButtonLink = ({ button, appearance, compact = false ,onClick}) => {
+const ButtonLink = ({ button, appearance, compact = false, onClick }) => {
   return (
     <CustomLink link={button}>
       <ButtonContent

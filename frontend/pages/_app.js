@@ -10,9 +10,10 @@ import "@/styles/index.css"
 const MyApp = ({ Component, pageProps }) => {
   // Extract the data we need
   const { global } = pageProps
-  if (!global) {
+  if (global == null) {
     return <ErrorPage statusCode={404} />
   }
+
   const { metadata, favicon, metaTitleSuffix } = global.attributes
 
   return (
@@ -60,7 +61,6 @@ MyApp.getInitialProps = async (appContext) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(appContext)
   const globalLocale = await getGlobalData(appContext.router.locale)
-
 
   return {
     ...appProps,

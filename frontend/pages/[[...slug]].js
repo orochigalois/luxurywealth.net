@@ -12,6 +12,7 @@ import { getLocalizedPaths } from "utils/localize"
 
 const DynamicPage = ({ sections, metadata, preview, global, pageContext }) => {
   const router = useRouter()
+
   // Check if the required data was provided
   if (!router.isFallback && !sections?.length) {
     return <ErrorPage statusCode={404} />
@@ -67,7 +68,7 @@ export async function getStaticPaths(context) {
     }
   })
 
-  return { paths, fallback: true }
+  return { paths, fallback: false }
 }
 
 export async function getStaticProps(context) {

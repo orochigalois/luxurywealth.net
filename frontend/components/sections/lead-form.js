@@ -28,8 +28,8 @@ const LeadForm = ({ data }) => {
                 {},
                 {
                   method: "POST",
-                  body: JSON.stringify({data:{email: values.email,
-                    location: data.location,}
+                  body: JSON.stringify({
+                    data: { email: values.email, location: data.location },
                   }),
                 }
               )

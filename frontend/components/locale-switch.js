@@ -10,7 +10,7 @@ import WorldIcon from "./icons/world"
 import { useOnClickOutside } from "../utils/hooks"
 import { getLocalizedPage } from "../utils/localize"
 
-const LocaleSwitch = ({ pageContext,isDarkTheme=false }) => {
+const LocaleSwitch = ({ pageContext, isDarkTheme = false }) => {
   const isMounted = useRef(false)
   const select = useRef()
   const router = useRouter()
@@ -24,17 +24,17 @@ const LocaleSwitch = ({ pageContext,isDarkTheme=false }) => {
     setLocale(selectedLocale)
   }
 
-  const beautifyLocale= (locale) => { 
+  const beautifyLocale = (locale) => {
     switch (locale) {
       case "en":
-        return "English";
-        break;
+        return "English"
+        break
       case "zh-CN":
-        return "中文";
-        break;
+        return "中文"
+        break
       default:
-        return "English";
-        break;
+        return "English"
+        break
     }
   }
 
@@ -80,8 +80,10 @@ const LocaleSwitch = ({ pageContext,isDarkTheme=false }) => {
         className="world__button focus:outline-none flex items-center justify-between px-2 py-2 cursor-pointer h-full rounded-md w-32"
         onClick={() => setShowing(!showing)}
       >
-        <WorldIcon colorClass={'world__icon'}/>
-        <span className="world__button__span capitalize">{beautifyLocale(locale)}</span>
+        <WorldIcon colorClass={"world__icon"} />
+        <span className="world__button__span capitalize">
+          {beautifyLocale(locale)}
+        </span>
         <MdExpandMore className="ml-1 world__button__arrow" />
       </button>
       <div

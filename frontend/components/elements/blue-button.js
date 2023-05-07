@@ -10,21 +10,18 @@ const BlueButton = ({
   isButton,
   handleClick,
   loading = false,
-  type
+  type,
 }) => {
   const isInternalLink = link.url.startsWith("/")
 
   const buttonClasses = (className) => {
-    return `blue-button ${className}`;
+    return `blue-button ${className}`
   }
-
 
   if (isButton) {
     return (
       <button className={className} onClick={handleClick} type={type}>
-        <div
-          className={buttonClasses(className)}
-        >
+        <div className={buttonClasses(className)}>
           {loading && <Loader />}
           {children}
         </div>
@@ -44,7 +41,12 @@ const BlueButton = ({
   // Plain <a> tags for external links
   if (link.newTab) {
     return (
-      <a href={link.url} className={buttonClasses(className)} target="_blank" rel="noopener noreferrer">
+      <a
+        href={link.url}
+        className={buttonClasses(className)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
       </a>
     )

@@ -1,6 +1,6 @@
 import React from "react"
 
-const WorldIcon = ({colorClass}) => {
+const WorldIcon = ({ colorClass }) => {
   return (
     <div className="w-4 h-4 mr-2 ">
       <svg
