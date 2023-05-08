@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import EmblaCarouselProjects from "../elements/EmblaCarouselProjects"
 import { getStrapiMedia } from "utils/media"
+
+
 const NewsMedia = ({ data }) => {
-  console.log(data.projects.data[1].attributes)
   const sliders__num = data.projects.data.length
   const [nextImage, setNextImage] = useState(
     getStrapiMedia(

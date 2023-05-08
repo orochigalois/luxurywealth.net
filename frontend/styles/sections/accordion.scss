@@ -71,6 +71,18 @@
     padding-right: 30px;
 }
 
+.zh-CN #accordion .accordion__title {
+    cursor: pointer;
+    transform: rotate(0);
+    writing-mode: vertical-rl;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 41px;
+    letter-spacing: 0em;
+    padding-left: 30px;
+    padding-right: 67px;
+}
+
 @media (max-width: 1320px) {
     #accordion .accordion__title {
         padding-left: 40px;

@@ -10,6 +10,7 @@ import { getLocalizedPaths } from "utils/localize"
 import useEmblaCarousel from "embla-carousel-react"
 import { getStrapiMedia } from "utils/media"
 import moment from "moment"
+import {getStrapiURL} from "utils/api"
 
 const Project = ({ project, global, pageContext }) => {
   const [viewportRef, embla] = useEmblaCarousel({
@@ -148,13 +149,15 @@ const Project = ({ project, global, pageContext }) => {
 
 export async function getStaticPaths(context) {
   // Get all pages from Strapi
-  const res = await fetch(`http://localhost:1337/api/projects`)
+  const res = await fetch(`${getStrapiURL(
+    `/api/projects`
+  )}`)
   const data = await res.json()
 
   const paths = data.data.map((page) => {
     return {
       params: {
-        id: `${page.id}`,
+        id: `${page.attributes.slug}`,
       },
     }
   })
@@ -166,8 +169,12 @@ export async function getStaticProps(context) {
   const { params, locale, locales, defaultLocale, preview = null } = context
   const globalLocale = await getGlobalData(locale)
 
+  
+
   const res = await fetch(
-    `http://localhost:1337/api/projects/${params.id}?populate=*`
+    `${getStrapiURL(
+        `/api/projects?filters[slug]=${params.id}&populate=*`
+      )}`
   )
   const data = await res.json()
 
@@ -175,7 +182,7 @@ export async function getStaticProps(context) {
     locale,
     locales,
     defaultLocale,
-    slug: data.data.attributes.slug,
+    slug: data.data[0].attributes.slug,
     localizations: "en",
   }
   // const localizedPaths = getLocalizedPaths(pageContext)
@@ -190,7 +197,7 @@ export async function getStaticProps(context) {
   })
   return {
     props: {
-      project: data.data.attributes,
+      project: data.data[0].attributes,
       global: globalLocale.data,
       pageContext: {
         ...pageContext,
