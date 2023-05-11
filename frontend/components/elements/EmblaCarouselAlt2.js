@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react"
 import { PrevButtonAlt, NextButtonAlt } from "./EmblaCarouselButtons"
 import useEmblaCarousel from "embla-carousel-react"
 import { getStrapiMedia } from "utils/media"
+import Image from "next/image"
 
 const EmblaCarouselAlt2 = ({ slides, notifyPrev, notifyNext }) => {
   const [viewportRef, embla] = useEmblaCarousel({
@@ -15,11 +16,11 @@ const EmblaCarouselAlt2 = ({ slides, notifyPrev, notifyNext }) => {
   const scrollPrev = useCallback(() => {
     embla && embla.scrollPrev()
     notifyPrev()
-  }, [embla])
+  }, [embla, notifyPrev])
   const scrollNext = useCallback(() => {
     embla && embla.scrollNext()
     notifyNext()
-  }, [embla])
+  }, [embla, notifyNext])
 
   const onSelect = useCallback(() => {
     if (!embla) return
@@ -45,10 +46,11 @@ const EmblaCarouselAlt2 = ({ slides, notifyPrev, notifyNext }) => {
                     className="img__wrapper"
                     style={{ paddingTop: 568 + "px" }}
                   >
-                    <img
+                    <Image
                       className="embla__slide__img"
                       src={getStrapiMedia(slide.attributes.url)}
                       alt=""
+                      layout="fill"
                     />
                   </div>
                 </div>

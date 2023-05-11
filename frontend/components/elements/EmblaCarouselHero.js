@@ -3,6 +3,7 @@ import { DotButton } from "./EmblaCarouselButtons"
 import useEmblaCarousel from "embla-carousel-react"
 import { getStrapiMedia } from "utils/media"
 import Autoplay from "embla-carousel-autoplay"
+import Image from "next/image"
 
 const EmblaCarouselHero = ({ slides }) => {
   const [viewportRef, embla] = useEmblaCarousel({}, [Autoplay()])
@@ -37,10 +38,11 @@ const EmblaCarouselHero = ({ slides }) => {
                     className="img__wrapper"
                     style={{ paddingTop: 568 + "px" }}
                   >
-                    <img
+                    <Image
                       className="embla__slide__img"
                       src={getStrapiMedia(slide.attributes.url)}
                       alt=""
+                      layout="fill"
                     />
                   </div>
                 </div>

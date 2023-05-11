@@ -8,7 +8,7 @@ import { MdExpandMore } from "react-icons/md"
 import WorldIcon from "./icons/world"
 
 import { useOnClickOutside } from "../utils/hooks"
-import { getLocalizedPage } from "../utils/localize"
+import { getLocalizedPage, localizePath } from "../utils/localize"
 
 const LocaleSwitch = ({ pageContext, isDarkTheme = false }) => {
   const isMounted = useRef(false)
@@ -54,13 +54,12 @@ const LocaleSwitch = ({ pageContext, isDarkTheme = false }) => {
         localeCookie !== pageContext.locale
       ) {
         // Redirect to locale page if locale mismatch
-        const localePage = getLocalizedPage(localeCookie, pageContext)
-
-        router.push(
-          `${localizePath({ ...pageContext, ...localePage })}`,
-          `${localizePath({ ...pageContext, ...localePage })}`,
-          { locale: localePage.locale }
-        )
+        // const localePage = getLocalizedPage(localeCookie, pageContext)
+        // router.push(
+        //   `${localizePath({ ...pageContext, ...localePage })}`,
+        //   `${localizePath({ ...pageContext, ...localePage })}`,
+        //   { locale: localePage.locale }
+        // )
       }
       setShowing(false)
     }
@@ -70,6 +69,14 @@ const LocaleSwitch = ({ pageContext, isDarkTheme = false }) => {
 
     return () => {
       isMounted.current = true
+    }
+  }, [locale, router, pageContext])
+  useEffect(() => {
+    if (router.asPath.includes("#")) {
+      console.log("test###")
+      router.push("/")
+      console.log(locale)
+      console.log(pageContext)
     }
   }, [locale, router, pageContext])
 
@@ -99,6 +106,7 @@ const LocaleSwitch = ({ pageContext, isDarkTheme = false }) => {
                 key={locale}
                 locale={locale}
                 role="option"
+                scroll={false}
                 passHref
               >
                 <p

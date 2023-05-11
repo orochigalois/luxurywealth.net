@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from "react"
 import { PrevButtonAlt, NextButtonAlt } from "./EmblaCarouselButtons"
 import useEmblaCarousel from "embla-carousel-react"
 import { getStrapiMedia } from "utils/media"
+import Link from "next/link"
+import Image from "next/image"
 
 const EmblaCarouselProjects = ({ slides, notifyIndex }) => {
   const [viewportRef, embla] = useEmblaCarousel({
@@ -32,7 +34,7 @@ const EmblaCarouselProjects = ({ slides, notifyIndex }) => {
     onSelect()
     embla.on("select", onSelect)
     notifyIndex(selectedIndex)
-  }, [embla, onSelect, selectedIndex])
+  }, [embla, onSelect, selectedIndex, notifyIndex])
 
   return (
     <>
@@ -42,19 +44,24 @@ const EmblaCarouselProjects = ({ slides, notifyIndex }) => {
             {slides.map((slide, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__inner">
-                  <div
-                    className="img__wrapper"
-                    style={{ paddingTop: 568 + "px" }}
-                  >
-                    <img
-                      className="embla__slide__img"
-                      src={getStrapiMedia(
-                        slide.attributes.image_shown_on_homepage.data.attributes
-                          .url
-                      )}
-                      alt=""
-                    />
-                  </div>
+                  <Link href={"/project/" + slide.attributes.slug}>
+                    <a>
+                      <div
+                        className="img__wrapper"
+                        style={{ paddingTop: 568 + "px" }}
+                      >
+                        <Image
+                          className="embla__slide__img"
+                          src={getStrapiMedia(
+                            slide.attributes.image_shown_on_homepage.data
+                              .attributes.url
+                          )}
+                          alt=""
+                          layout="fill"
+                        />
+                      </div>
+                    </a>
+                  </Link>
                 </div>
               </div>
             ))}

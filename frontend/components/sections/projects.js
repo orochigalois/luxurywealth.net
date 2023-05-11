@@ -1,28 +1,31 @@
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import EmblaCarouselProjects from "../elements/EmblaCarouselProjects"
 import { getStrapiMedia } from "utils/media"
+import Image from "next/image"
 
-
-const NewsMedia = ({ data }) => {
+const Projects = ({ data }) => {
   const sliders__num = data.projects.data.length
+  const [nextSlug, setNextSlug] = useState(
+    data.projects.data[1].attributes.slug
+  )
   const [nextImage, setNextImage] = useState(
     getStrapiMedia(
       data.projects.data[1].attributes.image_shown_on_homepage.data.attributes
         .url
     )
   )
-  const [name, setName] = useState(data.projects.data[1].attributes.title)
-  const [cat, setCat] = useState(data.projects.data[1].attributes.category)
+  const [name, setName] = useState(data.projects.data[0].attributes.title)
+  const [cat, setCat] = useState(data.projects.data[0].attributes.category)
   const notifyIndex = (index) => {
-    if (index == sliders__num - 1) {
+    if (index + 1 === sliders__num) {
       setNextImage(
         getStrapiMedia(
           data.projects.data[0].attributes.image_shown_on_homepage.data
             .attributes.url
         )
       )
-      setName(data.projects.data[0].attributes.title)
-      setCat(data.projects.data[0].attributes.category)
+      setNextSlug(data.projects.data[0].attributes.slug)
     } else {
       setNextImage(
         getStrapiMedia(
@@ -30,9 +33,11 @@ const NewsMedia = ({ data }) => {
             .attributes.url
         )
       )
-      setName(data.projects.data[index + 1].attributes.title)
-      setCat(data.projects.data[index + 1].attributes.category)
+      setNextSlug(data.projects.data[index + 1].attributes.slug)
     }
+
+    setName(data.projects.data[index].attributes.title)
+    setCat(data.projects.data[index].attributes.category)
   }
   return (
     <section className="overflow-hidden w-full relative" id="projects">
@@ -50,9 +55,18 @@ const NewsMedia = ({ data }) => {
               slides={data.projects.data}
               notifyIndex={notifyIndex}
             />
-            <div className="next__wrapper">
-              <img className="next__image" src={nextImage} alt="next image" />
-            </div>
+            <Link href={"/project/" + nextSlug}>
+              <a>
+                <div className="next__wrapper">
+                  <Image
+                    className="next__image"
+                    src={nextImage}
+                    alt="next image"
+                    layout="fill"
+                  />
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -60,4 +74,4 @@ const NewsMedia = ({ data }) => {
   )
 }
 
-export default NewsMedia
+export default Projects

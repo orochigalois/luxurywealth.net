@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { getStrapiMedia } from "utils/media"
+import Image from "next/image"
 const Accordion = ({ data }) => {
   const [openAccordion, setOpenAccordion] = useState(null)
 
@@ -32,9 +33,11 @@ const Accordion = ({ data }) => {
                   {item.title}
                 </div>
                 <div className="accordion__content">
-                  <img
+                  <Image
                     src={getStrapiMedia(item.image.data.attributes.url)}
                     alt={item.image.data.attributes.alternativeText}
+                    width={500}
+                    height={100}
                   />
                   <p>{item.text}</p>
                 </div>
@@ -66,9 +69,11 @@ const Accordion = ({ data }) => {
                   {item.title}
                 </div>
                 <div className="accordion__content">
-                  <img
+                  <Image
                     src={getStrapiMedia(item.image.data.attributes.url)}
                     alt={item.image.data.attributes.alternativeText}
+                    width={500}
+                    height={100}
                   />
                   <p>{item.text}</p>
                 </div>

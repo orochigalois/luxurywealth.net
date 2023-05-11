@@ -218,7 +218,6 @@ export async function getPageData({ slug, locale, preview }) {
                     posts {
                         data{
                             id
-                            
                             attributes {
                                 createdAt
                                 title
@@ -239,6 +238,7 @@ export async function getPageData({ slug, locale, preview }) {
                             attributes {
                                 title
                                 category
+                                slug
                                 image_shown_on_homepage {
                                     ...FileParts
                                 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react"
 import { DotButton, PrevButton, NextButton } from "./EmblaCarouselButtons"
 import useEmblaCarousel from "embla-carousel-react"
 import { getStrapiMedia } from "utils/media"
+import Image from "next/image"
 
 const EmblaCarousel = ({ slides }) => {
   const [viewportRef, embla] = useEmblaCarousel({ skipSnaps: false })
@@ -39,10 +40,11 @@ const EmblaCarousel = ({ slides }) => {
             {slides.map((slide, index) => (
               <div className="embla__slide" key={index}>
                 <div className="embla__slide__inner">
-                  <img
+                  <Image
                     className="embla__slide__img"
                     src={getStrapiMedia(slide.attributes.url)}
-                    alt="A cool cat."
+                    alt=""
+                    layout="fill"
                   />
                 </div>
               </div>

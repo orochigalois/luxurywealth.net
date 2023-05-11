@@ -103,6 +103,17 @@
       },
       "type": "string",
       "regex": "^$|^[a-zA-Z/-]+$"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "meta.metadata",
+      "required": true
     }
   }
 }

@@ -5,6 +5,7 @@ import { getStrapiMedia } from "utils/media"
 import moment from "moment"
 import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css"
+import Image from "next/image"
 
 const EmblaCarouselAlt = ({ slides }) => {
   const [viewportRef, embla] = useEmblaCarousel({
@@ -57,13 +58,14 @@ const EmblaCarouselAlt = ({ slides }) => {
                       }%`,
                     }}
                   >
-                    <img
+                    <Image
                       className="embla__slide__img"
                       src={getStrapiMedia(
                         slide.attributes.image.data.attributes.url
                       )}
                       alt=""
                       onClick={() => openLightbox(index)}
+                      layout="fill"
                     />
                   </div>
 
