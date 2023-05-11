@@ -2,10 +2,10 @@
   "dependencies": {
     "@strapi/plugin-graphql": "^4.0.0",
     "lodash.set": "^4.3.2",
-    "@strapi/strapi": "4.3.8",
-    "@strapi/plugin-users-permissions": "4.3.8",
-    "@strapi/plugin-i18n": "4.3.8",
-    "better-sqlite3": "7.4.6"
+    "@strapi/strapi": "4.10.2",
+    "@strapi/plugin-users-permissions": "4.10.2",
+    "@strapi/plugin-i18n": "4.10.2",
+    "better-sqlite3": "8.0.1"
   },
   "name": "backend",
   "private": true,
@@ -22,12 +22,12 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "4f366012-6378-4734-b7f2-d4618b08aa0c",
+    "uuid": "23b2b0f5-2c72-4416-9065-b9b00d3891ce",
     "template": "@strapi/template-corporate@^1.0.0",
     "starter": "@strapi/starter-next-corporate"
   },
   "engines": {
-    "node": ">=14.19.1 <=16.x.x",
+    "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
